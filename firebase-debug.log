@@ -1,0 +1,103 @@
+[debug] [2022-12-17T19:28:41.212Z] ----------------------------------------------------------------------
+[debug] [2022-12-17T19:28:41.213Z] Command:       /usr/local/bin/firebase /home/dienerld/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve --only functions
+[debug] [2022-12-17T19:28:41.214Z] CLI Version:   11.18.0
+[debug] [2022-12-17T19:28:41.214Z] Platform:      linux
+[debug] [2022-12-17T19:28:41.214Z] Node Version:  v16.16.0
+[debug] [2022-12-17T19:28:41.214Z] Time:          Sat Dec 17 2022 16:28:41 GMT-0300 (Brasilia Standard Time)
+[debug] [2022-12-17T19:28:41.214Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-17T19:28:41.277Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-17T19:28:41.277Z] > authorizing via signed-in user (diener.dornelas@gmail.com)
+[debug] [2022-12-17T19:28:41.277Z] [iam] checking project police-api-4e141 for permissions ["firebase.projects.get"]
+[debug] [2022-12-17T19:28:41.278Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/police-api-4e141:testIamPermissions [none]
+[debug] [2022-12-17T19:28:41.278Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/police-api-4e141:testIamPermissions x-goog-quota-user=projects/police-api-4e141
+[debug] [2022-12-17T19:28:41.278Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/police-api-4e141:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-12-17T19:28:42.111Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/police-api-4e141:testIamPermissions 200
+[debug] [2022-12-17T19:28:42.112Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/police-api-4e141:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-12-17T19:28:42.112Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/police-api-4e141 [none]
+[debug] [2022-12-17T19:28:42.494Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/police-api-4e141 200
+[debug] [2022-12-17T19:28:42.494Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/police-api-4e141 {"projectId":"police-api-4e141","projectNumber":"744327562065","displayName":"Police-api","name":"projects/police-api-4e141","resources":{"hostingSite":"police-api-4e141"},"state":"ACTIVE","etag":"1_4fd0a96f-6e46-4294-acb3-23dfe1a65b5b"}
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-12-17T19:28:42.506Z] defaultcredentials: writing to file /home/dienerld/.config/firebase/diener_dornelas_gmail.com_application_default_credentials.json
+[debug] [2022-12-17T19:28:42.507Z] Setting GAC to /home/dienerld/.config/firebase/diener_dornelas_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/dienerld/.config/firebase/diener_dornelas_gmail.com_application_default_credentials.json"}}
+[debug] [2022-12-17T19:28:42.507Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/police-api-4e141/adminSdkConfig [none]
+[debug] [2022-12-17T19:28:42.897Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/police-api-4e141/adminSdkConfig 200
+[debug] [2022-12-17T19:28:42.897Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/police-api-4e141/adminSdkConfig {"projectId":"police-api-4e141","storageBucket":"police-api-4e141.appspot.com"}
+[info] i  functions: Watching "/run/media/HD/Codes/DD/police-api/src/functions/" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/run/media/HD/Codes/DD/police-api/src/functions/\" for Cloud Functions..."}}
+[debug] [2022-12-17T19:28:42.916Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-12-17T19:28:43.946Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "axios": "^1.2.1",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-12-17T19:28:43.946Z] Building nodejs source
+[debug] [2022-12-17T19:28:43.946Z] Analyzing nodejs backend spec
+[debug] [2022-12-17T19:28:43.947Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-12-17T19:28:44.238Z] Serving at port 9005
+
+[debug] [2022-12-17T19:28:44.289Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-12-17T19:28:44.294Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[info] ✔  functions[us-central1-helloWorld]: http function initialized (http://localhost:5000/police-api-4e141/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/police-api-4e141/us-central1/helloWorld)."}}
+[debug] [2022-12-17T19:28:47.035Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-12-17T19:28:47.036Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-12-17T19:28:47.036Z] Accepted request GET /police-api-4e141/us-central1/helloWorld --> us-central1-helloWorld
+[debug] [2022-12-17T19:28:47.038Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-17T19:28:47.038Z] [functions] Got req.url=/police-api-4e141/us-central1/helloWorld, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/police-api-4e141/us-central1/helloWorld, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-12-17T19:28:47.047Z] [worker-pool] addWorker(us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloWorld)"}}
+[debug] [2022-12-17T19:28:47.047Z] [worker-pool] Adding worker with key us-central1-helloWorld, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloWorld, total=1"}}
+[debug] [2022-12-17T19:28:47.598Z] [runtime-status] [124585] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [124585] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-12-17T19:28:47.598Z] [runtime-status] [124585] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [124585] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-12-17T19:28:47.599Z] [runtime-status] [124585] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [124585] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-12-17T19:28:47.599Z] [runtime-status] [124585] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [124585] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-12-17T19:28:47.628Z] [runtime-status] [124585] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [124585] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-12-17T19:28:47.628Z] [runtime-status] [124585] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [124585] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-12-17T19:28:47.628Z] [runtime-status] [124585] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [124585] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-12-17T19:28:47.629Z] [runtime-status] [124585] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [124585] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-12-17T19:28:47.630Z] [runtime-status] [124585] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [124585] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-12-17T19:28:47.630Z] [runtime-status] [124585] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [124585] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/run/media/HD/Codes/DD/police-api/src/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-12-17T19:28:47.647Z] [runtime-status] [124585] Functions runtime initialized. {"cwd":"/run/media/HD/Codes/DD/police-api/src/functions","node_version":"16.16.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [124585] Functions runtime initialized. {\"cwd\":\"/run/media/HD/Codes/DD/police-api/src/functions\",\"node_version\":\"16.16.0\"}"}}
+[debug] [2022-12-17T19:28:47.647Z] [runtime-status] [124585] Listening to port: /tmp/fire_emu_410b0a31218dca41.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [124585] Listening to port: /tmp/fire_emu_410b0a31218dca41.sock"}}
+[debug] [2022-12-17T19:28:47.656Z] [worker-us-central1-helloWorld-ce95d213-3fbb-4508-b349-854456ea54df]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-ce95d213-3fbb-4508-b349-854456ea54df]: IDLE"}}
+[debug] [2022-12-17T19:28:47.656Z] [worker-pool] submitRequest(triggerId=us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloWorld)"}}
+[debug] [2022-12-17T19:28:47.656Z] [worker-us-central1-helloWorld-ce95d213-3fbb-4508-b349-854456ea54df]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-ce95d213-3fbb-4508-b349-854456ea54df]: BUSY"}}
+[info] i  functions: Beginning execution of "helloWorld" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Beginning execution of \"helloWorld\""}}
+[warn] ⚠  functions: TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:372:5)
+    at URL.onParseError (node:internal/url:553:9)
+    at new URL (node:internal/url:629:5)
+    at dispatchHttpRequest (/run/media/HD/Codes/DD/police-api/src/functions/node_modules/axios/dist/node/axios.cjs:2385:20)
+    at new Promise (<anonymous>)
+    at http (/run/media/HD/Codes/DD/police-api/src/functions/node_modules/axios/dist/node/axios.cjs:2321:10)
+    at Axios.dispatchRequest (/run/media/HD/Codes/DD/police-api/src/functions/node_modules/axios/dist/node/axios.cjs:3249:10)
+    at Axios.request (/run/media/HD/Codes/DD/police-api/src/functions/node_modules/axios/dist/node/axios.cjs:3599:33)
+    at Axios.<computed> [as get] (/run/media/HD/Codes/DD/police-api/src/functions/node_modules/axios/dist/node/axios.cjs:3625:17)
+    at Function.wrap [as get] (/run/media/HD/Codes/DD/police-api/src/functions/node_modules/axios/dist/node/axios.cjs:27:15) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"TypeError [ERR_INVALID_URL]: Invalid URL\n    at new NodeError (node:internal/errors:372:5)\n    at URL.onParseError (node:internal/url:553:9)\n    at new URL (node:internal/url:629:5)\n    at dispatchHttpRequest (/run/media/HD/Codes/DD/police-api/src/functions/node_modules/axios/dist/node/axios.cjs:2385:20)\n    at new Promise (<anonymous>)\n    at http (/run/media/HD/Codes/DD/police-api/src/functions/node_modules/axios/dist/node/axios.cjs:2321:10)\n    at Axios.dispatchRequest (/run/media/HD/Codes/DD/police-api/src/functions/node_modules/axios/dist/node/axios.cjs:3249:10)\n    at Axios.request (/run/media/HD/Codes/DD/police-api/src/functions/node_modules/axios/dist/node/axios.cjs:3599:33)\n    at Axios.<computed> [as get] (/run/media/HD/Codes/DD/police-api/src/functions/node_modules/axios/dist/node/axios.cjs:3625:17)\n    at Function.wrap [as get] (/run/media/HD/Codes/DD/police-api/src/functions/node_modules/axios/dist/node/axios.cjs:27:15)"}}
+[warn] ⚠  Your function was killed because it raised an unhandled error. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Your function was killed because it raised an unhandled error."}}
+[debug] [2022-12-17T19:28:47.669Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-12-17T19:28:47.669Z] [worker-us-central1-helloWorld-ce95d213-3fbb-4508-b349-854456ea54df]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-ce95d213-3fbb-4508-b349-854456ea54df]: exited"}}
+[debug] [2022-12-17T19:28:47.669Z] [worker-us-central1-helloWorld-ce95d213-3fbb-4508-b349-854456ea54df]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-ce95d213-3fbb-4508-b349-854456ea54df]: FINISHED"}}

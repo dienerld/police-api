@@ -1,3 +1,5 @@
+import "dotenv/config";
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -7,13 +9,13 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-	apiKey: "AIzaSyA-J-QIc4zHi6l3u1eW9Hh0gtxYGkcPGdY",
-	authDomain: "police-api-4e141.firebaseapp.com",
-	projectId: "police-api-4e141",
-	storageBucket: "police-api-4e141.appspot.com",
-	messagingSenderId: "744327562065",
-	appId: "1:744327562065:web:e365e606a3850415eb4970",
-	measurementId: "G-MPYHJRZJE9",
+	apiKey: process.env.API_KEY,
+	authDomain: process.env.AUTH_DOMAIN,
+	projectId: process.env.PROJECT_ID,
+	storageBucket: process.env.STORAGE_BUCKET,
+	messagingSenderId: process.env.MESSAGING_SENDER_ID,
+	appId: process.env.APP_ID,
+	measurementId: process.env.MEASUREMENT_ID,
 };
 
 export function firebase() {

@@ -10,10 +10,13 @@ exports.helloWorld = functions.https.onRequest(async (request, response) => {
 	if (!urlJson) {
 		return response.send('URL_JSON is not defined');
 	}
-	// const { author, telegram, urls } = await axios.getUrls(urlJson);
-	const data = await axios.getUrls(urlJson);
+	const { author, telegram, urls } = await axios.getUrls(urlJson);
+	const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-	console.log(data);
+	for await (const url of urls) {
+		await axios.ping(url);
+		await delay(500);
+	}
 
-	response.send(data);
+	response.send({ author, telegram, urls });
 });

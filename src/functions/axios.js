@@ -1,17 +1,18 @@
 const axios = require('axios');
 
 module.exports = {
-	ping: (url) => {
-		axios.get(url, {
-			headers: {
-				Accept: 'application/vnd.github.v3+json',
-				'User-Agent': 'Firebase Functions'
-			}
-		}).then((response) => {
-			console.log(response.data);
-		}).catch((error) => {
-			console.error(error);
-		});
+	ping: async (url) => {
+		try {
+			const { status } = await axios.get(url, {
+				headers: {
+					Accept: 'application/vnd.github.v3+json',
+					'User-Agent': 'Firebase Functions'
+				}
+			});
+			console.log(`${url} - ${status}`);
+		} catch (error) {
+			console.error(`${url} - ${error}`);
+		}
 	},
 
 	getUrls: async (urlJson) => {
